@@ -33,8 +33,10 @@ const SITE = {
   about: {
     paragraphs: [
       "J’ai 21 ans, je viens de Nantes et je suis en 3ᵉ année de BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne.",
-      "Je pars rarement de l’image. Je cherche d’abord ce que les gens font vraiment, pas ce qu’ils disent faire : sur Club Med, qu’on ne sait plus s’ennuyer ; sur Sainte-Croix, qu’un parc animalier ne se vend jamais par l’oreille. Une fois que je tiens ça, le reste se dessine vite.",
-      "Et avant de produire quoi que ce soit, je fouille : ce qui s’est déjà fait, ce que raconte la concurrence, ce que tout le monde va proposer. C’est long, mais ça m’évite de fabriquer proprement une idée déjà vue.",
+      "Je ne cherche pas forcément à choisir une seule case.",
+      "Je me construis encore dans mon profil publicitaire, alors j’aime toucher à un peu tout : graphisme, vidéo, motion, 3D, stratégie… sans prétendre tout maîtriser.",
+      "Je teste, j’apprends, je bidouille. Je m’intéresse aussi beaucoup à l’IA et à la façon dont elle peut trouver sa place dans la création.",
+      "L’idée, c’est de profiter de maintenant pour explorer avant de décider où je veux vraiment aller.",
     ],
     qualities: ["Calme", "Créatif", "Entreprenant", "Curieux"],
     interests: ["Jeux vidéo", "Cinéma", "Dessin", "Basket"],
@@ -236,10 +238,10 @@ const SITE = {
   },
 
   contact: {
-    // Le titre (« Qu’est-ce qu’on fabrique ? ») est en dur dans index.html,
-    // avec le mot en <em> pour la couleur d’accent.
+    // Le titre (« Et maintenant, on construit quoi ensemble ? ») est en dur
+    // dans index.html, avec le mot en <em> pour la couleur d’accent.
     message:
-      "Je cherche l’endroit où mes idées auront des problèmes : un stage ou une alternance, en agence créative, en agence de communication ou chez l’annonceur.",
+      "Une campagne, une identité, une affiche, une vidéo, une idée un peu bizarre… Je ne sais pas encore. Et c’est justement ce qui m’intéresse. Tant qu’il y a quelque chose à chercher, à construire ou à créer, je suis partant.",
     cta: "Le reste, je préfère vous le montrer en vrai.",
   },
 
