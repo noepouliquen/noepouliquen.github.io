@@ -33,8 +33,8 @@ const SITE = {
   about: {
     paragraphs: [
       "J’ai 21 ans, je viens de Nantes et je suis en 3ᵉ année de BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne.",
-      "Je cherche un stage ou une alternance. La stratégie et la création m’intéressent autant l’une que l’autre : comprendre pourquoi une idée fonctionne m’aide à mieux la fabriquer. Si je dois pencher d’un côté, ce sera la création.",
-      "Pour l’instant, mon objectif est simple : me confronter à un maximum de projets réels, et apprendre vite.",
+      "Je pars rarement de l’image. Je cherche d’abord ce que les gens font vraiment, pas ce qu’ils disent faire : sur Club Med, qu’on ne sait plus s’ennuyer ; sur Sainte-Croix, qu’un parc animalier ne se vend jamais par l’oreille. Une fois que je tiens ça, le reste se dessine vite.",
+      "Et avant de produire quoi que ce soit, je fouille : ce qui s’est déjà fait, ce que raconte la concurrence, ce que tout le monde va proposer. C’est long, mais ça m’évite de fabriquer proprement une idée déjà vue.",
     ],
     qualities: ["Calme", "Créatif", "Entreprenant", "Curieux"],
     interests: ["Jeux vidéo", "Cinéma", "Dessin", "Basket"],
@@ -236,9 +236,11 @@ const SITE = {
   },
 
   contact: {
+    // Le titre (« Qu’est-ce qu’on fabrique ? ») est en dur dans index.html,
+    // avec le mot en <em> pour la couleur d’accent.
     message:
-      "Je cherche un stage ou une alternance en agence créative, en agence de communication, ou directement chez un annonceur — aussi bien côté stratégie que côté création.",
-    cta: "Si un poste ou un projet vous fait penser à moi, écrivez-moi.",
+      "Je cherche l’endroit où mes idées auront des problèmes : un stage ou une alternance, en agence créative, en agence de communication ou chez l’annonceur.",
+    cta: "Le reste, je préfère vous le montrer en vrai.",
   },
 
   nav: [

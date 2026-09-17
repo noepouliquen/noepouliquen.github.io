@@ -299,14 +299,13 @@ h1, h2, h3{ text-wrap: balance; }
 .site-header.on-night{ background: rgba(7, 8, 11, 0.5); }
 .menu-open .site-header{ background: var(--paper); }
 .site-header.is-hidden{ transform: translateY(-100%); }
-/* Logo : tracé vectoriel (Drowner), pas de fichier de police à charger. */
-.brand{ display: flex; align-items: center; }
-.brand-mark{ display: block; height: 20px; width: auto; }
-.brand-last{ opacity: 0.55; transition: opacity var(--dur-m) var(--ease); }
-.on-night .brand-last{ opacity: 0.62; }
-@media (max-width: 420px){
-  .brand-mark{ height: 17px; }
+.brand{
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
 }
+.brand span{ color: var(--fg-3); transition: color var(--dur-m) var(--ease); }
 
 .nav-desktop{ display: none; }
 @media (min-width: 900px){
