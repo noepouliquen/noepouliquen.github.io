@@ -36,7 +36,7 @@ const SITE = {
       "Je cherche un stage ou une alternance. La stratégie et la création m’intéressent autant l’une que l’autre : comprendre pourquoi une idée fonctionne m’aide à mieux la fabriquer. Si je dois pencher d’un côté, ce sera la création.",
       "Pour l’instant, mon objectif est simple : me confronter à un maximum de projets réels, et apprendre vite.",
     ],
-    qualities: ["Calme", "Créatif", "Tête froide", "Curieux"],
+    qualities: ["Calme", "Créatif", "Entreprenant", "Curieux"],
     interests: ["Jeux vidéo", "Cinéma", "Dessin", "Basket"],
   },
 

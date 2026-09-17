@@ -18,6 +18,7 @@ secours et le texte passe sur une police système.
 
 ```
 ├── index.html              ← structure + textes de l'accueil, d'À propos et du Contact
+│                             (le logo en haut à gauche y est dessiné en SVG, pas en texte)
 ├── assets/
 │   ├── css/style.css       ← toute la direction artistique (couleurs, typo, mise en page)
 │   ├── fonts/Rinter.woff2  ← police des titres (Thunder Type, gratuite, usage commercial OK)

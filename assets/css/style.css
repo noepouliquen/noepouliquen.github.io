@@ -299,13 +299,14 @@ h1, h2, h3{ text-wrap: balance; }
 .site-header.on-night{ background: rgba(7, 8, 11, 0.5); }
 .menu-open .site-header{ background: var(--paper); }
 .site-header.is-hidden{ transform: translateY(-100%); }
-.brand{
-  font-family: var(--font-title);
-  font-weight: 400;
-  font-size: 1.2rem;
-  letter-spacing: -0.01em;
+/* Logo : tracé vectoriel (Drowner), pas de fichier de police à charger. */
+.brand{ display: flex; align-items: center; }
+.brand-mark{ display: block; height: 20px; width: auto; }
+.brand-last{ opacity: 0.55; transition: opacity var(--dur-m) var(--ease); }
+.on-night .brand-last{ opacity: 0.62; }
+@media (max-width: 420px){
+  .brand-mark{ height: 17px; }
 }
-.brand span{ color: var(--fg-3); transition: color var(--dur-m) var(--ease); }
 
 .nav-desktop{ display: none; }
 @media (min-width: 900px){
@@ -759,13 +760,12 @@ h1, h2, h3{ text-wrap: balance; }
 }
 .skills-cat h3{ margin-bottom: 1rem; }
 .skills-list{ border-top: 1px solid var(--rule); }
+/* Pas d'effet au survol : ça faisait croire que les lignes étaient cliquables. */
 .skill-item{
   padding: 0.8rem 0;
   border-bottom: 1px solid var(--rule);
   font-size: 1.05rem;
-  transition: padding-left var(--dur-s) var(--ease), color var(--dur-s) var(--ease);
 }
-.skill-item:hover{ padding-left: 0.35rem; color: var(--accent); }
 
 /* ================= Projects ================= */
 .projects-list{ display: flex; flex-direction: column; }
@@ -1066,6 +1066,7 @@ h1, h2, h3{ text-wrap: balance; }
   width: min(78vw, 380px);
   margin: 0;
 }
+/* Pas d'effet au survol non plus : les créations ne s'ouvrent pas. */
 .gallery-item img{
   width: 100%;
   aspect-ratio: 3/4;
@@ -1073,9 +1074,7 @@ h1, h2, h3{ text-wrap: balance; }
   background: var(--surface-raised);
   outline: 1px solid var(--rule);
   outline-offset: -1px;
-  transition: transform var(--dur-m) var(--ease);
 }
-.gallery-item:hover img{ transform: translateY(-6px); }
 .gallery-caption{
   margin-top: 0.8rem;
   font-size: 0.88rem;
