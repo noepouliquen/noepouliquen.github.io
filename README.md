@@ -39,9 +39,11 @@ et dans `content.js` : modifier les deux.
 
 ## Le bouton CV
 
-Désactivé tant qu'aucun fichier n'est fourni. Pour l'activer :
-1. Déposer le PDF dans `assets/` (ex. `assets/cv-noe-pouliquen.pdf`).
-2. Dans `assets/js/content.js`, remplir `person.cvUrl: "assets/cv-noe-pouliquen.pdf"`.
+Il pointe sur `assets/cv-noe-pouliquen.pdf`, réglé dans `assets/js/content.js`
+(`person.cvUrl`). Pour changer de CV : remplacer le PDF en gardant le même nom.
+
+Ce PDF est la **version publique** : pas de téléphone ni d'adresse, le dépôt étant
+public. La version complète est à envoyer à la main.
 
 ## Ajouter des images
 

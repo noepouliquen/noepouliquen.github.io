@@ -25,9 +25,9 @@ const SITE = {
     roles: ["Création graphique", "Motion design & vidéo", "Stratégie publicitaire"],
     email: "noepouliquenn@gmail.com",
     linkedin: "https://www.linkedin.com/in/noé-pouliquen",
-    // Le bouton CV est prêt dans la page ; ajoute le lien du PDF ici
-    // dès qu'il est disponible (ex : "assets/cv-noe-pouliquen.pdf").
-    cvUrl: "",
+    // Version publique du CV : sans téléphone ni adresse, le dépôt GitHub
+    // étant public. La version complète reste à envoyer à la main.
+    cvUrl: "assets/cv-noe-pouliquen.pdf",
   },
 
   about: {

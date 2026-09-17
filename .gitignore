@@ -4,6 +4,10 @@ typo/
 # Scènes Blender (sources de travail, inutiles au site)
 blender/
 
+# Source du CV + version complète : contiennent le numéro de téléphone.
+# Seule assets/cv-noe-pouliquen.pdf (sans téléphone) est publiée.
+cv/
+
 # Notes de travail
 CLAUDE.md
 .claude/
