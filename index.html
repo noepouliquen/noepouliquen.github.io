@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Noé Pouliquen — Création graphique, motion &amp; stratégie publicitaire</title>
+<meta name="description" content="Portfolio de Noé Pouliquen, étudiant en BUT Information-Communication parcours Publicité (IUT Bordeaux Montaigne). Création graphique, motion design et stratégie publicitaire." />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#07080b" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Noé Pouliquen — Portfolio" />
+<meta property="og:description" content="Création graphique, motion design et stratégie publicitaire — étudiant en BUT Information-Communication, parcours Publicité." />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..700;1,400..500&amp;display=swap" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Noé Pouliquen",
+  "jobTitle": "Étudiant en publicité — création graphique et stratégie",
+  "email": "mailto:noepouliquenn@gmail.com",
+  "sameAs": ["https://www.linkedin.com/in/noé-pouliquen"],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "IUT Bordeaux Montaigne"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header on-night" id="site-header">
+  <a href="#accueil" class="brand">Noé <span>Pouliquen</span></a>
+
+  <nav class="nav-desktop" aria-label="Navigation principale">
+    <a href="#a-propos">À propos</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#experiences">Expériences</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#galerie">Créations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-mobile" id="nav-mobile" aria-label="Navigation mobile">
+  <ul>
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#a-propos">À propos</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#experiences">Expériences</a></li>
+    <li><a href="#parcours">Parcours</a></li>
+    <li><a href="#galerie">Créations</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Sommaire latéral (desktop) -->
+<nav class="index-rail on-night" aria-label="Sommaire">
+  <a href="#accueil" data-label="Accueil" aria-label="Accueil"></a>
+  <a href="#a-propos" data-label="À propos" aria-label="À propos"></a>
+  <a href="#competences" data-label="Compétences" aria-label="Compétences"></a>
+  <a href="#projets" data-label="Projets" aria-label="Projets"></a>
+  <a href="#experiences" data-label="Expériences" aria-label="Expériences"></a>
+  <a href="#parcours" data-label="Parcours" aria-label="Parcours"></a>
+  <a href="#galerie" data-label="Créations" aria-label="Créations"></a>
+  <a href="#contact" data-label="Contact" aria-label="Contact"></a>
+</nav>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section id="accueil" class="hero theme-night" aria-label="Présentation">
+    <div class="hero-space" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker" id="hero-roles"><!-- rôles injectés par JS --></p>
+        <div class="cover">
+          <h1 class="cover-title">
+            <span class="cover-word cover-word--port">Port</span>
+            <span class="cover-word cover-word--folio">folio</span>
+            <span class="visually-hidden"> — Noé Pouliquen</span>
+          </h1>
+          <p class="cover-note cover-note--a">Je prends au sérieux les idées qui ne le sont pas.</p>
+          <p class="cover-note cover-note--b">Aime explorer chaque terrain où l’idée peut prendre forme.</p>
+        </div>
+        <p class="hero-intro">Étudiant en 3ᵉ année de publicité à Bordeaux, entre création graphique et stratégie de marque.</p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn">Voir mes projets</a>
+          <a href="#" id="cv-button" class="link" aria-disabled="true">Télécharger mon CV</a>
+        </div>
+        <div class="hero-social">
+          <a href="mailto:noepouliquenn@gmail.com" id="hero-email" class="link">noepouliquenn@gmail.com</a>
+          <a href="https://www.linkedin.com/in/noé-pouliquen" target="_blank" rel="noopener" id="hero-linkedin" class="link">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-figure">
+        <div class="hero-figure-glow" aria-hidden="true"></div>
+        <img src="assets/img/hero-character.png" alt="Illustration dessinée à la main par Noé : un personnage bleu stylisé, en pied, au trait noir." class="hero-character" width="850" height="1500" />
+        <span class="hero-figure-tag">— dessin original —</span>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ================= À PROPOS ================= -->
+  <section id="a-propos" class="section" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">01 / 07</span>
+        <h2 class="section-title" id="about-title">À propos</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>J’ai 21 ans, je viens de Nantes et je suis en 3ᵉ année de BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne.</p>
+          <p>Je cherche un stage ou une alternance. La stratégie et la création m’intéressent autant l’une que l’autre : comprendre pourquoi une idée fonctionne m’aide à mieux la fabriquer. Si je dois pencher d’un côté, ce sera la création.</p>
+          <p>Pour l’instant, mon objectif est simple : me confronter à un maximum de projets réels, et apprendre vite.</p>
+        </div>
+
+        <div class="about-side">
+          <div class="about-block reveal">
+            <h3 class="label">Qualités</h3>
+            <ul class="chip-list" id="about-qualities"></ul>
+          </div>
+          <div class="about-block reveal">
+            <h3 class="label">Centres d’intérêt</h3>
+            <ul class="chip-list" id="about-interests"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPÉTENCES ================= -->
+  <section id="competences" class="section" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">02 / 07</span>
+        <h2 class="section-title" id="skills-title">Compétences</h2>
+      </div>
+      <div class="skills-grid reveal-stagger" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETS ================= -->
+  <section id="projets" class="section" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">03 / 07</span>
+        <h2 class="section-title" id="projects-title">Projets</h2>
+      </div>
+      <div class="projects-list" id="projects-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= EXPÉRIENCES ================= -->
+  <section id="experiences" class="section" aria-labelledby="exp-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">04 / 07</span>
+        <h2 class="section-title" id="exp-title">Expériences</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ================= PARCOURS ================= -->
+  <section id="parcours" class="section" aria-labelledby="edu-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">05 / 07</span>
+        <h2 class="section-title" id="edu-title">Parcours</h2>
+      </div>
+      <div class="edu-list reveal" id="edu-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= GALERIE ================= -->
+  <section id="galerie" class="section" aria-labelledby="gallery-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">06 / 07</span>
+        <h2 class="section-title" id="gallery-title">Créations</h2>
+      </div>
+      <div class="gallery-wrap reveal">
+        <div class="gallery-scroller" id="gallery-scroller" tabindex="0" role="region" aria-label="Galerie de créations, défilement horizontal"></div>
+        <div class="gallery-controls">
+          <button class="gallery-btn" id="gallery-prev" aria-label="Créations précédentes">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="gallery-btn" id="gallery-next" aria-label="Créations suivantes">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section contact-section theme-night" aria-labelledby="contact-title">
+    <div class="space" aria-hidden="true"></div>
+    <div class="container contact-inner">
+      <div class="section-index reveal">07 / 07</div>
+      <h2 class="contact-title reveal" id="contact-title">Une idée, un poste,<br /><em>un projet</em> à&nbsp;monter&nbsp;?</h2>
+      <p class="contact-message reveal">Je cherche un stage ou une alternance en agence créative, en agence de communication, ou directement chez un annonceur — aussi bien côté stratégie que côté création.</p>
+      <p class="contact-cta-line reveal">Si un poste ou un projet vous fait penser à moi, écrivez-moi.</p>
+      <div class="contact-actions reveal">
+        <a href="mailto:noepouliquenn@gmail.com" class="btn" id="contact-email">noepouliquenn@gmail.com</a>
+        <a href="https://www.linkedin.com/in/noé-pouliquen" target="_blank" rel="noopener" class="link" id="contact-linkedin">Me contacter sur LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer theme-night">
+  <span>© <span id="footer-year"></span> Noé Pouliquen</span>
+  <span>Site conçu et codé sur mesure — sans template.</span>
+</footer>
+
+<!-- ================= CASE STUDY OVERLAY ================= -->
+<div class="case-study" id="case-study" role="dialog" aria-modal="true" aria-labelledby="cs-title" hidden>
+  <div class="case-study-scroll">
+    <button class="case-study-close link" id="case-study-close">Fermer <span aria-hidden="true">×</span></button>
+    <div class="case-study-inner">
+      <figure class="case-study-hero">
+        <img id="cs-hero-img" src="" alt="" />
+      </figure>
+      <div class="case-study-body">
+        <span class="case-study-label label" id="cs-type"></span>
+        <h2 class="case-study-title" id="cs-title"></h2>
+        <p class="case-study-slogan" id="cs-slogan"></p>
+        <div id="cs-sections"></div>
+      </div>
+
+      <div class="case-study-gallery" id="cs-gallery"></div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/three-setup.js"></script>
+</body>
+</html>

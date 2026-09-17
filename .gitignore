@@ -1,0 +1,14 @@
+# Polices tierces déposées pour les tests : licences qui interdisent la redistribution
+typo/
+
+# Scènes Blender (sources de travail, inutiles au site)
+blender/
+
+# Notes de travail
+CLAUDE.md
+.claude/
+
+# Fichiers système
+Thumbs.db
+desktop.ini
+.DS_Store
