@@ -32,14 +32,13 @@ const SITE = {
 
   about: {
     paragraphs: [
-      "J’ai 21 ans, je viens de Nantes et je suis en 3ᵉ année de BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne.",
+      "J’ai 21 ans, je suis originaire de Nantes, en 3ᵉ année de BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne.",
       "Je ne cherche pas forcément à choisir une seule case.",
-      "Je me construis encore dans mon profil publicitaire, alors j’aime toucher à un peu tout : graphisme, vidéo, motion, 3D, stratégie… sans prétendre tout maîtriser.",
+      "Je me construis encore dans mon profil publicitaire, alors j’aime toucher un peu à tout : graphisme, vidéo, motion, 3D, stratégie… sans prétendre tout maîtriser.",
       "Je teste, j’apprends, je bidouille. Je m’intéresse aussi beaucoup à l’IA et à la façon dont elle peut trouver sa place dans la création.",
-      "L’idée, c’est de profiter de maintenant pour explorer avant de décider où je veux vraiment aller.",
     ],
-    qualities: ["Calme", "Créatif", "Entreprenant", "Curieux"],
-    interests: ["Jeux vidéo", "Cinéma", "Dessin", "Basket"],
+    qualities: ["Polyvalent", "Créatif", "Persévérant", "Curieux"],
+    interests: ["Cinéma", "Dessin", "Jeux vidéo", "Basket"],
   },
 
   skills: [
