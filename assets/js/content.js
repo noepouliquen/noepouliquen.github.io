@@ -157,6 +157,19 @@ const SITE = {
     },
   ],
 
+  // Showreel de la section Motion design. Monté dans After Effects (sources
+  // hors dépôt, dossier motion/) ; version web : H.264 1080p, muette, ~10 Mo.
+  // Le poster est l'image à 2,8 s du film.
+  motion: {
+    src: "assets/video/showreel.mp4",
+    poster: "assets/img/motion-poster.jpg",
+    width: 1920,
+    height: 1080,
+    alt: "Showreel motion design de 36 secondes, sans son, en quatre parties : animer un personnage, installer un univers, habiller un réseau, faire parler un chiffre.",
+    credits:
+      "Extraits du spot CSAPA 53 × OwnSport (projet perso) et du jeu de société ROOZERS (stage chez L’Oreille Graphique). Réalisé sous After Effects.",
+  },
+
   experience: [
     {
       company: "L’Oreille Graphique",
@@ -249,6 +262,7 @@ const SITE = {
     { href: "#a-propos", label: "À propos" },
     { href: "#competences", label: "Compétences" },
     { href: "#projets", label: "Projets" },
+    { href: "#motion", label: "Motion design" },
     { href: "#experiences", label: "Expériences" },
     { href: "#parcours", label: "Parcours" },
     { href: "#galerie", label: "Créations" },

@@ -26,6 +26,7 @@ secours et le texte passe sur une police système.
 │   ├── js/main.js          ← comportement du site
 │   ├── js/three-setup.js   ← accueil 3D (Three.js)
 │   ├── models/             ← personnage 3D (.glb) + sa copie .glb.js pour le double-clic
+│   ├── video/showreel.mp4  ← showreel de la section Motion design (H.264, muet, ~10 Mo)
 │   └── img/                ← images (déjà compressées pour le web)
 └── README.md
 ```
@@ -44,6 +45,14 @@ Il pointe sur `assets/cv-noe-pouliquen.pdf`, réglé dans `assets/js/content.js`
 
 Ce PDF est la **version publique** : pas de téléphone ni d'adresse, le dépôt étant
 public. La version complète est à envoyer à la main.
+
+## Le showreel
+
+Réglé dans `assets/js/content.js` (`motion`) : vidéo, image d'attente
+(`assets/img/motion-poster.jpg`), description et crédits. Il se lance tout seul, sans son
+et en boucle, quand la section arrive à l'écran ; avec « réduire les animations », il attend
+qu'on appuie sur lecture. Pour le remplacer : exporter en H.264 (MP4, 1080p, 8 à 12 Mo, sans
+son) sous le même nom.
 
 ## Ajouter des images
 

@@ -363,17 +363,26 @@ h1, h2, h3{ text-wrap: balance; }
   z-index: 85;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 2rem var(--gutter);
+  padding: 5rem var(--gutter) 2rem; /* en haut : la hauteur du header */
+  overflow-y: auto;
+  /* Fermé : caché pour de bon (sinon, sur un écran bas, la fin de la liste
+     dépasse sous le header, et les liens restent atteignables au clavier). */
+  visibility: hidden;
   transform: translateY(-100%);
+  transition: transform var(--dur-m) var(--ease), visibility 0s linear var(--dur-m);
+}
+.nav-mobile.is-open{
+  visibility: visible;
+  transform: translateY(0);
   transition: transform var(--dur-m) var(--ease);
 }
-.nav-mobile.is-open{ transform: translateY(0); }
-.nav-mobile ul{ display: flex; flex-direction: column; gap: 1rem; }
+/* margin auto : centré s'il y a la place, sinon ça défile depuis le haut */
+.nav-mobile ul{ display: flex; flex-direction: column; gap: 1rem; margin-block: auto; }
 .nav-mobile a{
   font-family: var(--font-title);
   font-weight: 400;
   font-size: clamp(1.9rem, 9vw, 2.6rem);
+  line-height: 1.2;
   letter-spacing: -0.03em;
 }
 
@@ -852,6 +861,39 @@ h1, h2, h3{ text-wrap: balance; }
   .project-poster{ max-width: 340px; justify-self: start; }
 }
 
+/* ================= Motion design (showreel) ================= */
+/* Le film en 16:9 sur toute la largeur. Aucun effet au survol : la vidéo
+   elle-même n'est pas cliquable, seuls les deux boutons dessous le sont. */
+.motion-reel{ margin: 0; }
+.motion-frame{
+  aspect-ratio: 16 / 9;
+  background: var(--night);
+  outline: 1px solid var(--rule);
+  box-shadow: 0 40px 70px -42px rgba(21, 23, 27, 0.5);
+}
+.motion-video{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.motion-caption{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem 2rem;
+  margin-top: 1.3rem;
+}
+.motion-credits{
+  max-width: 62ch;
+  font-size: 0.88rem;
+  color: var(--fg-3);
+}
+.motion-controls{ display: flex; gap: 0.6rem; }
+/* prefers-reduced-motion : les contrôles natifs de la vidéo suffisent */
+.motion-reel.is-static .motion-controls{ display: none; }
+
 /* ---- Case study overlay (page claire) ---- */
 .case-study{
   position: fixed;
@@ -1084,7 +1126,9 @@ h1, h2, h3{ text-wrap: balance; }
   gap: 0.6rem;
   margin-top: 1.4rem;
 }
-.gallery-btn{
+/* Bouton carré (galerie, lecteur du showreel) */
+.gallery-btn,
+.square-btn{
   width: 44px; height: 44px;
   border: 1px solid var(--rule-strong);
   display: flex; align-items: center; justify-content: center;
@@ -1092,12 +1136,15 @@ h1, h2, h3{ text-wrap: balance; }
   transition: background var(--dur-s) var(--ease), color var(--dur-s) var(--ease), border-color var(--dur-s) var(--ease);
 }
 .gallery-btn:hover,
-.gallery-btn:focus-visible{
+.gallery-btn:focus-visible,
+.square-btn:hover,
+.square-btn:focus-visible{
   background: var(--fg);
   border-color: var(--fg);
   color: var(--surface);
 }
-.gallery-btn svg{ width: 16px; height: 16px; }
+.gallery-btn svg,
+.square-btn svg{ width: 16px; height: 16px; }
 
 /* ================= Contact (4ᵉ de couverture) ================= */
 .contact-section > .container{ position: relative; z-index: 2; }

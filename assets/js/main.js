@@ -14,6 +14,10 @@
   const svgIcon = {
     arrow:
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+    play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',
+    pause: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>',
+    fullscreen:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>',
   };
 
   /* ----------------------------------------------------------
@@ -259,6 +263,112 @@
         if (e.target === overlay) closeCaseStudy();
       });
     }
+  }
+
+  /* ----------------------------------------------------------
+     4 bis. Motion design — le showreel
+     Muet et en boucle. La vidéo n'est chargée qu'à l'approche de la
+     section, se lance quand elle est à l'écran et s'arrête quand elle
+     en sort. Si l'utilisateur la met en pause, elle ne repart pas toute
+     seule. prefers-reduced-motion : rien ne se lance, contrôles natifs.
+  ---------------------------------------------------------- */
+  function renderMotion() {
+    const reel = SITE.motion;
+    const figure = document.getElementById("motion-reel");
+    if (!reel || !figure) return;
+
+    figure.innerHTML = `
+      <div class="motion-frame">
+        <video class="motion-video" muted loop playsinline preload="none"
+          poster="${reel.poster}" width="${reel.width}" height="${reel.height}"
+          aria-label="${reel.alt}"></video>
+      </div>
+      <figcaption class="motion-caption">
+        <p class="motion-credits">${reel.credits}</p>
+        <div class="motion-controls">
+          <button type="button" class="square-btn" data-motion="toggle"></button>
+          <button type="button" class="square-btn" data-motion="fullscreen" aria-label="Voir en plein écran">${svgIcon.fullscreen}</button>
+        </div>
+      </figcaption>`;
+
+    const video = figure.querySelector("video");
+    const toggleBtn = figure.querySelector('[data-motion="toggle"]');
+    const fullBtn = figure.querySelector('[data-motion="fullscreen"]');
+    video.muted = true; // l'attribut seul ne suffit pas partout pour la lecture auto
+
+    if (prefersReducedMotion) {
+      figure.classList.add("is-static");
+      video.controls = true;
+      video.src = reel.src; // preload="none" : rien n'est téléchargé avant « lecture »
+      return;
+    }
+
+    let loaded = false;
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      video.src = reel.src;
+    }
+
+    function syncToggle() {
+      const playing = !video.paused;
+      toggleBtn.innerHTML = playing ? svgIcon.pause : svgIcon.play;
+      toggleBtn.setAttribute("aria-label", playing ? "Mettre la vidéo en pause" : "Lire la vidéo");
+    }
+    video.addEventListener("play", syncToggle);
+    video.addEventListener("pause", syncToggle);
+    syncToggle();
+
+    let userPaused = false;
+    toggleBtn.addEventListener("click", () => {
+      load();
+      if (video.paused) {
+        userPaused = false;
+        video.play().catch(syncToggle);
+      } else {
+        userPaused = true;
+        video.pause();
+      }
+    });
+
+    fullBtn.addEventListener("click", () => {
+      load();
+      try {
+        if (video.requestFullscreen) video.requestFullscreen().catch(() => {});
+        else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen(); // iPhone
+      } catch (e) {
+        /* vidéo pas encore prête (iPhone) : on reste dans la page */
+      }
+      if (video.paused && !userPaused) video.play().catch(syncToggle);
+    });
+    // En plein écran, on donne les contrôles natifs (barre de lecture, sortie).
+    document.addEventListener("fullscreenchange", () => {
+      video.controls = document.fullscreenElement === video;
+    });
+
+    // Chargement un peu avant l'arrivée à l'écran…
+    const loader = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        load();
+        loader.disconnect();
+      },
+      { rootMargin: "400px 0px" }
+    );
+    loader.observe(video);
+
+    // … lecture seulement quand elle est vraiment visible.
+    new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          load();
+          if (!userPaused) video.play().catch(syncToggle);
+        } else if (!video.paused) {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    ).observe(video);
   }
 
   /* ----------------------------------------------------------
@@ -666,6 +776,7 @@
     renderAbout();
     renderSkills();
     renderProjects();
+    renderMotion();
     renderTimeline();
     renderEducation();
     renderGallery();
