@@ -8,6 +8,10 @@ blender/
 # Seule assets/cv-noe-pouliquen.pdf (sans téléphone) est publiée.
 cv/
 
+# Chantier du showreel : rushes, projets AE, prémontages (plusieurs centaines de Mo).
+# Seule la vidéo finale compressée sera publiée, dans assets/video/.
+motion/
+
 # Notes de travail
 CLAUDE.md
 .claude/
