@@ -32,7 +32,7 @@ const SITE = {
 
   about: {
     paragraphs: [
-      "Originaire de Nantes, j’ai 21 ans et j’entame ma 3ᵉ année en BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne. En tant qu’étudiant, cette formation nous apprend à travailler sur toutes les étapes d’une communication, de la stratégie au marketing et à la créativité.",
+      "Originaire de Nantes, j’ai 21 ans et j’entame ma 3ᵉ année en BUT Information-Communication, parcours Publicité, à l’IUT Bordeaux Montaigne.",
       "Polyvalent et curieux, je ne cherche pas à m’enfermer dans une case et reste ouvert à tout type d’expériences.",
       "En constante évolution, je construis petit à petit mon profil de publicitaire. Ainsi, j’aime toucher à tout : graphisme, production vidéo, motion, 3D, la stratégie…",
       "L’IA est aussi un sujet particulièrement intéressant pour moi, surtout la manière dont elle peut trouver sa place dans le processus de création.",
